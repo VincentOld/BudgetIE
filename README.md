@@ -92,7 +92,9 @@ pip install -r requirements.txt
 2. 下载预训练模型：
 ```bash
 # 下载BERT模型到 model/bert-base-chinese/
+网盘链接：https://pan.baidu.com/s/1rX2QU7stVN4g6WNZNRRx4g?pwd=4eam 提取码: 4eam 
 # 下载微调后的模型到 model/finetuned_budget_bert.bin
+网盘链接https://pan.baidu.com/s/1v3O9b7CUx_pu2JjSlvaBKQ?pwd=9gqh 提取码: 9gqh 
 ```
 
 3. 配置参数：
