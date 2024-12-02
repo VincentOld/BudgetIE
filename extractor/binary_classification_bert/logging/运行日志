@@ -1,0 +1,107 @@
+E:\python3.10\python.exe E:\python_project\Budget_IE\extractor\binary_classification_bert\binary_classify.py
+Some weights of the model checkpoint at E:/python_project/Budget_IE/extractor/binary_classification_bert/model/bert-base-chinese were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+E:\python3.10\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+训练 Epoch 1/5: 100%|██████████| 363/363 [2:00:02<00:00, 19.84s/it]
+Epoch 1/5 - 训练损失: 0.1433, 训练准确率: 0.6977
+评估 验证集: 100%|██████████| 27/27 [03:21<00:00,  7.47s/it]
+验证集 ROC-AUC: 0.9543
+              precision    recall  f1-score   support
+
+           0     1.0000    0.7111    0.8312       315
+           1     0.5333    1.0000    0.6957       104
+
+    accuracy                         0.7828       419
+   macro avg     0.7667    0.8556    0.7634       419
+weighted avg     0.8842    0.7828    0.7975       419
+
+混淆矩阵:
+[[224  91]
+ [  0 104]]
+训练 Epoch 2/5:   0%|          | 0/363 [00:00<?, ?it/s]保存最佳模型于 Epoch 1
+训练 Epoch 2/5: 100%|██████████| 363/363 [1:53:12<00:00, 18.71s/it]
+Epoch 2/5 - 训练损失: 0.0701, 训练准确率: 0.8781
+评估 验证集: 100%|██████████| 27/27 [03:40<00:00,  8.16s/it]
+验证集 ROC-AUC: 0.9619
+              precision    recall  f1-score   support
+
+           0     0.9920    0.7873    0.8779       315
+           1     0.6036    0.9808    0.7473       104
+
+    accuracy                         0.8353       419
+   macro avg     0.7978    0.8840    0.8126       419
+weighted avg     0.8956    0.8353    0.8455       419
+
+混淆矩阵:
+[[248  67]
+ [  2 102]]
+保存最佳模型于 Epoch 2
+训练 Epoch 3/5: 100%|██████████| 363/363 [1:50:06<00:00, 18.20s/it]
+评估 验证集:   0%|          | 0/27 [00:00<?, ?it/s]Epoch 3/5 - 训练损失: 0.0548, 训练准确率: 0.9098
+评估 验证集: 100%|██████████| 27/27 [03:27<00:00,  7.67s/it]
+验证集 ROC-AUC: 0.9657
+              precision    recall  f1-score   support
+
+           0     0.9922    0.8127    0.8935       315
+           1     0.6335    0.9808    0.7698       104
+
+    accuracy                         0.8544       419
+   macro avg     0.8129    0.8967    0.8317       419
+weighted avg     0.9032    0.8544    0.8628       419
+
+混淆矩阵:
+[[256  59]
+ [  2 102]]
+训练 Epoch 4/5:   0%|          | 0/363 [00:00<?, ?it/s]保存最佳模型于 Epoch 3
+训练 Epoch 4/5: 100%|██████████| 363/363 [6:14:58<00:00, 61.98s/it]
+Epoch 4/5 - 训练损失: 0.0399, 训练准确率: 0.9337
+评估 验证集: 100%|██████████| 27/27 [1:05:47<00:00, 146.19s/it]
+验证集 ROC-AUC: 0.9674
+              precision    recall  f1-score   support
+
+           0     0.9853    0.8540    0.9150       315
+           1     0.6849    0.9615    0.8000       104
+
+    accuracy                         0.8807       419
+   macro avg     0.8351    0.9078    0.8575       419
+weighted avg     0.9108    0.8807    0.8864       419
+
+混淆矩阵:
+[[269  46]
+ [  4 100]]
+训练 Epoch 5/5:   0%|          | 0/363 [00:00<?, ?it/s]保存最佳模型于 Epoch 4
+训练 Epoch 5/5: 100%|██████████| 363/363 [2:11:09<00:00, 21.68s/it]
+Epoch 5/5 - 训练损失: 0.0342, 训练准确率: 0.9444
+评估 验证集: 100%|██████████| 27/27 [03:07<00:00,  6.93s/it]
+验证集 ROC-AUC: 0.9685
+              precision    recall  f1-score   support
+
+           0     0.9853    0.8508    0.9131       315
+           1     0.6803    0.9615    0.7968       104
+
+    accuracy                         0.8783       419
+   macro avg     0.8328    0.9062    0.8550       419
+weighted avg     0.9096    0.8783    0.8842       419
+
+混淆矩阵:
+[[268  47]
+ [  4 100]]
+保存最佳模型于 Epoch 5
+评估 测试集: 100%|██████████| 25/25 [02:59<00:00,  7.19s/it]
+测试集 ROC-AUC: 0.9680
+              precision    recall  f1-score   support
+
+           0     0.9826    0.7958    0.8794       284
+           1     0.6588    0.9655    0.7832       116
+
+    accuracy                         0.8450       400
+   macro avg     0.8207    0.8806    0.8313       400
+weighted avg     0.8887    0.8450    0.8515       400
+
+混淆矩阵:
+[[226  58]
+ [  4 112]]
+
+进程已结束,退出代码0
